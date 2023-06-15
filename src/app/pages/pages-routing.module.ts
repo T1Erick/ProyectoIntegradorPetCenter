@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardClientComponent } from './dashboard-client/dashboard-client.component';
 import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
+import { SocialNetworkComponent } from './social-network/social-network.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
     path: 'dashboard', component: PagesComponent,
     children: [
       {path: 'dashboard-client', component: DashboardClientComponent},
-      {path:'forum', component: ForumPetComponent},
+      {path:'forum', component: SocialNetworkComponent},
       {path:'products', component:ProductsComponent}
     ]
   }
