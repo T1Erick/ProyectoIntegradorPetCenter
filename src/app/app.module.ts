@@ -29,7 +29,8 @@ const routes :Routes =[
         AppRoutingModule,
         SharedModule,
         PagesRoutingModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        RouterModule
     ],
     exports:[RouterModule]
 })
