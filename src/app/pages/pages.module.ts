@@ -5,13 +5,14 @@ import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './social-network/social-network.component';
+import { RegisterProductComponent } from './register-product/register-product.component';
 
 
 
 
 
 @NgModule({
-  declarations: [ForumPetComponent,DashboardClientComponent, ProductsComponent, SocialNetworkComponent],
+  declarations: [ForumPetComponent,DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent],
   imports: [CommonModule,RouterModule],
   exports: [ForumPetComponent,DashboardClientComponent, ProductsComponent],
 })

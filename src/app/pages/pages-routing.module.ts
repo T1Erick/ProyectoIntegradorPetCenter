@@ -7,6 +7,7 @@ import { DashboardClientComponent } from './dashboard-client/dashboard-client.co
 import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
 import { SocialNetworkComponent } from './social-network/social-network.component';
+import { RegisterProductComponent } from './register-product/register-product.component';
 
 
 const routes: Routes = [
@@ -15,9 +16,11 @@ const routes: Routes = [
     children: [
       {path: 'dashboard-client', component: DashboardClientComponent},
       {path:'forum', component: SocialNetworkComponent},
-      {path:'products', component:ProductsComponent}
+      {path:'products', component:ProductsComponent},
+      {path:'register-products', component: RegisterProductComponent}
     ]
-  }
+  },
+  
 ]
 @NgModule({
   declarations: [],

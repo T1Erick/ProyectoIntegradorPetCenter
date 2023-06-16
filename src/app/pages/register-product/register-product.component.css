@@ -1,0 +1,126 @@
+
+.background-image-container {
+  background-image: url(../../../assets/img/adim.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.register-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.form-control {
+  height: 40px;
+  box-shadow: none;
+  color: #969fa4;
+}
+
+.form-control:focus {
+  border-color: #5cb85c;
+}
+
+.form-control,
+.btn {
+  border-radius: 3px;
+  background: #f7941d;
+  border: 3px black solid;
+
+}
+.register-box ::placeholder{
+  color:white
+}
+
+.signup-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  background: #FFFFFF;
+}
+
+.signup-form h2 {
+  color: black;
+  margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+
+
+.signup-form h2:before {
+  left: 0;
+}
+
+.signup-form h2:after {
+  right: 0;
+}
+
+.signup-form .hint-text {
+  color: black;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+input:focus,
+input:valid,
+textarea:focus,
+textarea:valid {
+  background-color: white;
+  color: black;
+}
+
+.registro button {
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+
+.signup-form .form-group {
+  margin-bottom: 20px;
+}
+
+.signup-form input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.signup-form .btn {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 140px;
+  outline: none !important;
+}
+
+.signup-form .row div:first-child {
+  padding-right: 10px;
+}
+
+.signup-form .row div:last-child {
+  padding-left: 10px;
+}
+
+.signup-form a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.signup-form a:hover {
+  text-decoration: none;
+}
+
+.signup-form form a {
+  color: #f7941d;
+  text-decoration: none;
+}
+
+.signup-form form a:hover {
+  text-decoration: underline;
+}
