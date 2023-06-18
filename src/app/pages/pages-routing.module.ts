@@ -17,7 +17,8 @@ const routes: Routes = [
       {path: 'dashboard-client', component: DashboardClientComponent},
       {path:'forum', component: SocialNetworkComponent},
       {path:'products', component:ProductsComponent},
-      {path:'register-products', component: RegisterProductComponent}
+      {path:'register-products', component: RegisterProductComponent},
+      {path:'perfil',component:ForumPetComponent}
     ]
   },
   

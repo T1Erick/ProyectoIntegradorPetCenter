@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3b5998;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.cover-photo .edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-picture .edit-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-details {
+    margin-top: 30px;
+}
+
+.profile-details h2 {
+    margin-bottom: 10px;
+}
+
+.profile-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-details li {
+    margin-bottom: 5px;
+}
+
+.profile-activities {
+    margin-top: 30px;
+}
+
+.profile-activities h2 {
+    margin-bottom: 10px;
+}
+
+.profile-activities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-activities li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
