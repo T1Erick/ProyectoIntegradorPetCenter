@@ -1,30 +1,33 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CreateUserModelDto, UpdateUserModelDto, UsersModel } from '../entities/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
 
-  readonly API_URL ='/api/patients';
+  readonly API_URL ='http://localhost:3000/users';
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllPacientes(): Observable<ClientModel[]> {
+  getAllUsers(): Observable<UsersModel[]> {
     const url = `${this.API_URL}`;
-    return this.httpClient.get<ClientModel[]>(url);
+    return this.httpClient.get<UsersModel[]>(url);
   }
 
-  getPacientesById(id: number): Observable<ClientModel[]>{
+  getUsersById(id: number): Observable<UsersModel[]>{
     const url = `${this.API_URL}/${id}`;
-    return this.httpClient.get<ClientModel[]>(url);
+    return this.httpClient.get<UsersModel[]>(url);
   }
 
-  createPatient(paciente:CreateClientDto): Observable<CreateClientDto>{
+  createUsers(users:CreateUserModelDto): Observable<CreateUserModelDto>{
     const url = `${this.API_URL}`;
-    return this.httpClient.post<CreateClientDto>(url,paciente);
+    return this.httpClient.post<CreateUserModelDto>(url,users);
 
   }
-  updatePatient(id:ClientModel['id_paciente'], product: UpdateClientDto) {
+  updateUsers(id:UsersModel['id'], product: UpdateUserModelDto) {
     const url = `${this.API_URL}/${id}`
     return this.httpClient.put(url, product);
   }
