@@ -8,7 +8,7 @@ import { Observable, map } from 'rxjs';
 })
 export class RolServiceService {
 
-  readonly API_URL = 'http://localhost:3000/rol';
+  readonly API_URL = 'http://localhost:3000/rols';
 
   constructor(private httpClient: HttpClient) { }
 
