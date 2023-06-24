@@ -42,11 +42,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <div class="product-card">
-        <img src="../../../assets/img/comidaperro1.jpg" alt="Producto 1">
-        <h4>Nombre del producto 1</h4>
-        <p>Precio: $50</p>
-        <p>Descripción del producto 1</p>
+      <div *ngFor="let product of products"class="product-card">
+        <img src="{{ product.foto }}" alt="Producto 1">
+        <h4>{{ product.titulo }}</h4>
+        <p>Precio: {{ product.precio }}$</p>
+        <p>{{ product.description }}</p>
         <button>Agregar al carrito</button>
       </div>
     </div>

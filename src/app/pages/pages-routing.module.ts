@@ -8,6 +8,9 @@ import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
 import { SocialNetworkComponent } from './social-network/social-network.component';
 import { RegisterProductComponent } from './register-product/register-product.component';
+import { RegisterCategoryComponent } from './register-category/register-category.component';
+import { RegisterSectionComponent } from './register-section/register-section.component';
+import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 
 
 const routes: Routes = [
@@ -18,10 +21,13 @@ const routes: Routes = [
       {path:'forum', component: SocialNetworkComponent},
       {path:'products', component:ProductsComponent},
       {path:'register-products', component: RegisterProductComponent},
-      {path:'perfil',component:ForumPetComponent}
+      {path:'register-category', component: RegisterCategoryComponent},
+      {path: 'register-seccion', component: RegisterSectionComponent},
+      {path:'perfil',component:ForumPetComponent},
+      {path:'dashboard-admin', component:DashboardAdminComponent}
     ]
   },
-  
+
 ]
 @NgModule({
   declarations: [],

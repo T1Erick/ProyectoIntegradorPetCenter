@@ -6,7 +6,7 @@ import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CategorServiceyService {
+export class CategorService {
 
   readonly API_URL = 'http://localhost:3000/category';
 

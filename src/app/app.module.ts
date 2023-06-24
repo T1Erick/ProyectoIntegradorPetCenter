@@ -13,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
+import { PagesModule } from './pages/pages.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
     SharedModule,
     PagesRoutingModule,
     AuthModule,
+    PagesModule,
     RouterModule.forRoot(routes),
   ],
   exports: [RouterModule],

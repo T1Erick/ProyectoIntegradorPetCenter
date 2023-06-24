@@ -21,9 +21,9 @@ export class ProductsService {
     const url =`${this.API_URL}/${id}`;
     return this.httpClient.get<ProductsModel>(url);
   }
-  build(products: CreateProductsModelDto): Observable<ProductsModel>{
+  build(products: CreateProductsModelDto): Observable<CreateProductsModelDto>{
     const url= `${this.API_URL}`;
-    return this.httpClient.post<ProductsModel>(url,products);
+    return this.httpClient.post<CreateProductsModelDto>(url,products);
   }
 
   update( id: ProductsModel['id'],products:UpdateProductsModelDto):Observable<ProductsModel>{

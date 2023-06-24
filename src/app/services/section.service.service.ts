@@ -6,7 +6,7 @@ import { CreateSectionModelDto, UpdateSectionDto, SectionModel } from '../entiti
 @Injectable({
   providedIn: 'root'
 })
-export class SectionServiceService {
+export class SectionService {
 
   readonly API_URL = 'http://localhost:3000/section';
 

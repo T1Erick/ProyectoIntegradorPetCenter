@@ -6,15 +6,15 @@ export interface ProductsModel{
   description: string;
   precio: number;
   foto: string;
-  fecha_vencimiento: Date;
+  fecha_vencimiento: string;
   category: CategoryModel;
 }
 
 export interface CreateProductsModelDto extends Omit<ProductsModel,'id' | 'category'>{
-  categoryId:number
+  categoryId:string
 }
 
 export interface UpdateProductsModelDto extends Partial<ProductsModel>{
   id:string;
-  categoryId?:number
+  categoryId?:string
 }

@@ -19,7 +19,7 @@
 .form-control {
   height: 40px;
   box-shadow: none;
-  color: #969fa4;
+  color: black;
 }
 
 .form-control:focus {
@@ -71,7 +71,7 @@
 }
 
 .signup-form .hint-text {
-  color: #999;
+  color: black;
   margin-bottom: 30px;
   text-align: center;
 }
