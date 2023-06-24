@@ -12,6 +12,7 @@ import { NofoundPagesComponent } from './noFound/nofound-pages.component';
 import { SharedModule } from './shared/shared.module';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
     AppRoutingModule,
     SharedModule,
     PagesRoutingModule,
+    AuthModule,
     RouterModule.forRoot(routes),
   ],
   exports: [RouterModule],

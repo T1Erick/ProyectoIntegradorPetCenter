@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './social-network/social-network.component';
 import { RegisterProductComponent } from './register-product/register-product.component';
+import { FormsModule } from '@angular/forms';
 
 
 

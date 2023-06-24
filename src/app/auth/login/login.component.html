@@ -4,11 +4,11 @@
           <img class="logo" src="../../../assets/img/dashboard-client/logo1.png" alt="Pet Center">
           <h1>Bienvenido a Pet Center</h1>
           <form action="">
-              <!--CORREO ELECTRONICO-->
+
               <label for="email">Correo electronico</label>
               <input type="text" placeholder="Ingresa tu correo">
 
-              <!--CONTRASEÑA-->
+
               <label for="password">Contraseña</label>
               <input type="text" placeholder="Ingresa tu contraseña">
 
@@ -18,7 +18,7 @@
               <br><br>
               <a id="dissabled-link" >¿No tienes una cuenta?</a>&nbsp;&nbsp;
 
-              <a  id="enabled-link" href="/register" onclid>Registrate aquí</a>
+              <a  id="enabled-link" (click)="navigateToRegister()" >Registrate aquí</a>
           </form>
   </div>
 </div>

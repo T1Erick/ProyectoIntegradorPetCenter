@@ -11,10 +11,10 @@ export interface UsersModel{
 }
 
 export interface CreateUserModelDto extends Omit<UsersModel,'id' | 'rol'>{
-  rolId:number
+  rol:string
 }
 
 export interface UpdateUserModelDto extends Partial<UsersModel>{
   id:string;
-  rolId?:number
+  rol?:RolModel
 }

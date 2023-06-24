@@ -9,11 +9,14 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
 constructor(private router: Router){
-  
+
 }
 
 
 navigateToDashboard(){this.router.navigateByUrl("/dashboard/dashboard-client")}
+navigateToRegister() {
+  this.router.navigateByUrl("register");
+}
 
 
 

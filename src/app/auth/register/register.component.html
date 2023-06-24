@@ -1,30 +1,29 @@
 
-
   <div class="signup-form">
     <div class="background-image-container"></div>
     <div class="register-box">
       <img class="logo" src="../../../assets/img/dashboard-client/logo1.png" alt="Pet Center">
-      <form action="/examples/actions/confirmation.php" method="post">
+      <form action="" >
         <h2>Registrate</h2>
         <p class="hint-text">Los animales te amaran crea tu cuenta ahora</p>
         <div class="form-group">
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control" name="name" placeholder="Nombres" required="required">
+                    <input id="name" [(ngModel)]="users.name" type="text" class="form-control" name="name" placeholder="Nombres" required="required">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" name="last_name" placeholder="Apellidos" required="required">
+                    <input  [(ngModel)]="users.lastname"type="text" class="form-control" name="last_name" placeholder="Apellidos" required="required">
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+            <input [(ngModel)]="users.email" type="email" class="form-control" name="email" placeholder="Email" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
+            <input [(ngModel)]="users.password" type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar Contraseña" required="required">
+            <input [(ngModel)]="passwordconfirm" type="text" class="form-control" name="confirm_password" placeholder="Confirmar Contraseña" >
         </div>
         <div class="form-group">
             <label class="form-check-label">
@@ -34,10 +33,10 @@
             </label>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">Registarte</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block"(click)="createUser()">Registarte</button>
         </div>
         <div class="text-center">Ya tienes una Cuenta ?
-          <a href="/login">Iniciar Sesion</a>
+          <a (click)="navigateToLogin()">Iniciar Sesion</a>
       </div>
     </form>
 
