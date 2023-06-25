@@ -58,15 +58,28 @@
       <h2>Registro de Categorias</h2>
       <p class="hint-text">Momento de agregar Categorias nuevas</p>
       <div class="form-group">
-        <input [(ngModel)]="categories.namecategory"  type="text" class="form-control" name="name" placeholder="Nombre de la categoria" required="required">
+        <input [(ngModel)]="categories.namecategory"  [(ngModel)]="selectedCategory.namecategory"  type="text" class="form-control" name="name" placeholder="Nombre de la categoria" required="required">
       </div>
       <div class="form-group">
-        <input [(ngModel)]="categories.description"   type="text" class="form-control" name="name" placeholder="Descripcion de la categoria" required="required">
+        <input [(ngModel)]="categories.description"  [(ngModel)]="selectedCategory.description" type="text" class="form-control" name="name" placeholder="Descripcion de la categoria" required="required">
+      </div>
+      <div class="form-group">
+        <ng-select [items]= "section"
+              [(ngModel)]="categories.sectionId"
+              [(ngModel)]="selectedCategory.sectionId"
+              bindLabel= "namesection"
+              name= "section"
+              id= "section"
+              bindValue= "id"
+              class="custom-ng-select"
+              >
+             </ng-select>
       </div>
 
 
       <div class="registro">
-          <button type="submit" (click)="createCategory()" >Registar</button>
+          <button *ngIf="!updating" type="submit" (click)="createCategory()" >Registar</button>
+          <button  *ngIf="updating"type="submit" (click)="updateCategory(selectedCategory.id,selectedCategory)">Actualizar</button>
       </div>
 
   </form>
@@ -78,13 +91,17 @@
 </div>
 
 <div class="container">
-  <h2>Lista de Categorias</h2>
+  <h2 class="cabeza">Lista de Categorias</h2>
+  <hr class="separador2">
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let cate of category">
-      {{ cate.namecategory }}
+      <div class="campo1">{{ cate.namecategory }}:</div>
+      <hr class="separador">
+      <div class="campo">{{cate.description}}</div>
+      <hr class="separador">
       <div class="float-right">
-        <button class="btn btn-primary btn-sm mr-2">Actualizar</button>
-        <button class="btn btn-danger btn-sm">Eliminar</button>
+        <button class="botones" (click)="editCategory(cate)">Editar</button>
+        <button class="botones" (click)="deleteCategory(cate.id)">Eliminar</button>
       </div>
     </li>
 

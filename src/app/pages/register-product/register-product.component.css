@@ -49,6 +49,14 @@
   position: relative;
   text-align: center;
 }
+.custom-ng-select {
+  border-radius: 3px;
+  background: #f7941d;
+  border: 3px black solid;
+  margin-bottom: 20px
+
+}
+
 
 
 

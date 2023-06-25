@@ -28,7 +28,7 @@ export class SectionService {
 
   update( id: SectionModel['id'],section:UpdateSectionDto):Observable<SectionModel>{
     const url= `${this.API_URL}/${id}`;
-    return this.httpClient.put<SectionModel>(url,section);
+    return this.httpClient.patch<SectionModel>(url,section);
   }
 
   destroy(id: SectionModel['id']):Observable<boolean>{

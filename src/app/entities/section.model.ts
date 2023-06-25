@@ -5,9 +5,10 @@ export interface SectionModel{
 }
 
 export interface CreateSectionModelDto extends Omit<SectionModel,'id' >{
-  
+
 }
 
 export interface UpdateSectionDto extends Partial<SectionModel>{
   id:string;
-} 
+  namesection:string;
+}

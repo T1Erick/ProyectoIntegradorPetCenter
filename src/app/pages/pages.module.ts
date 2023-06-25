@@ -6,11 +6,12 @@ import { ProductsComponent } from './products/products.component';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './social-network/social-network.component';
 import { RegisterProductComponent } from './register-product/register-product.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterSectionComponent } from './register-section/register-section.component';
 import { RegisterCategoryComponent } from './register-category/register-category.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -23,7 +24,9 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule],
+    RouterModule,
+  ReactiveFormsModule,
+NgSelectModule],
   exports: [ForumPetComponent,DashboardClientComponent, ProductsComponent,RegisterProductComponent],
 })
 export class PagesModule {}

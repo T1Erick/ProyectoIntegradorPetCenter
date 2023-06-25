@@ -28,7 +28,7 @@ export class CategorService {
 
   update( id: CategoryModel['id'],category:UpdateCategoryModelDto):Observable<CategoryModel>{
     const url= `${this.API_URL}/${id}`;
-    return this.httpClient.put<CategoryModel>(url,category);
+    return this.httpClient.patch<CategoryModel>(url,category);
   }
 
   destroy(id: CategoryModel['id']):Observable<boolean>{

@@ -32,6 +32,48 @@
   border: 3px black solid;
 
 }
+.container{
+  margin-bottom: 50px;
+}
+.botones{
+  border-radius: 3px;
+  background: #f7941d;
+  border: 3px black solid;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: black
+
+}
+.separador {
+  border-top: 1px solid #000000; /* Estilo de línea: sólida */
+  margin: 10px 0; /* Margen superior e inferior para separar los elementos */
+}
+.separador2 {
+  border-top: 4px solid #f7941d; /* Estilo de línea: sólida */
+  /* Margen superior e inferior para separar los elementos */
+}
+.campo1{
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 10px;
+
+}
+.cabeza{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+}
+.campo{
+  font-size: 15px;
+  margin-left: 20px;
+
+}
+
+
 .register-box ::placeholder{
   color:white
 }

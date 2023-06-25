@@ -26,7 +26,7 @@
             <div class="menu_text">
               <ul>
                 <li class="last">
-                  <a href="/dashboard/register-seccion">Secciones</a> / <a href="/dashboard/register-products">Productos</a>/ <a href="/dashboard/dashboard-admin">Home</a>
+                  <a href="/dashboard/register-category">Categorias</a> / <a href="/dashboard/register-products">Productos</a>/ <a href="/dashboard/dashboard-admin">Home</a>
                 </li>
               </ul>
             </div>
@@ -58,12 +58,13 @@
       <h2>Registro de secciones</h2>
       <p class="hint-text">Momento de agregar Secciones nuevas</p>
       <div class="form-group">
-        <input [(ngModel)]="secciones.namesection" type="text" class="form-control" name="name" placeholder="Nombre de la seccion" required="required">
+        <input [(ngModel)]="secciones.namesection" [(ngModel)]="selectedSection.namesection" type="text" class="form-control" name="name" placeholder="Nombre de la seccion" required="required">
       </div>
 
 
       <div class="registro">
-          <button type="submit" (click)="createSeccion()" >Registar</button>
+          <button *ngIf="!updating" (click)="createSeccion()" >Registar</button>
+          <button *ngIf="updating" (click)="updateSection(selectedSection.id, selectedSection)" type="submit" class="btn btn-primary">Actualizar</button>
       </div>
 
   </form>
@@ -74,13 +75,15 @@
 
 </div>
 <div class="container">
-  <h2>Lista de Secciones</h2>
+  <h2 class="cabeza">Lista de Secciones</h2>
+  <hr class="separador2">
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let secciones of seccion">
-      {{ secciones.namesection }}
+      <div class="campo1">{{ secciones.namesection }}</div>
+      <hr class="separador">
       <div class="float-right">
-        <button class="btn btn-primary btn-sm mr-2">Actualizar</button>
-        <button class="btn btn-danger btn-sm">Eliminar</button>
+        <button class="botones" (click)="editSection(secciones)">Editar</button>
+        <button class="botones"(click)="deleteSection(secciones.id)">Eliminar</button>
       </div>
     </li>
 
