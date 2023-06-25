@@ -2,7 +2,7 @@ export interface PublicationModel {
   id: string;
   title: string;
   description: string;
-  images: string[];
+  images: string;
 }
 export interface CreatePublicationModelDto extends Omit<PublicationModel,'id' >{
 
