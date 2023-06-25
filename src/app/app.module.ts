@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-//servicio menu
-import { CargarScriptsService } from './cargar-scripts.service';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -22,7 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, PagesComponent, NofoundPagesComponent],
-  providers: [CargarScriptsService],
+  providers: [],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
