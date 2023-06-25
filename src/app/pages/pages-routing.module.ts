@@ -11,6 +11,7 @@ import { RegisterProductComponent } from './register-product/register-product.co
 import { RegisterCategoryComponent } from './register-category/register-category.component';
 import { RegisterSectionComponent } from './register-section/register-section.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
+import { ListProductComponent } from './list-product/list-product.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,9 @@ const routes: Routes = [
       {path:'register-category', component: RegisterCategoryComponent},
       {path: 'register-seccion', component: RegisterSectionComponent},
       {path:'perfil',component:ForumPetComponent},
-      {path:'dashboard-admin', component:DashboardAdminComponent}
+      {path:'dashboard-admin', component:DashboardAdminComponent},
+      {path:'list-product', component:ListProductComponent}
+
     ]
   },
 

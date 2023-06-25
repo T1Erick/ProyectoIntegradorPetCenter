@@ -12,6 +12,7 @@ import { RegisterSectionComponent } from './register-section/register-section.co
 import { RegisterCategoryComponent } from './register-category/register-category.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ListProductComponent } from './list-product/list-product.component';
 
 
 
@@ -19,7 +20,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
-  declarations: [ForumPetComponent,DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent],
+  declarations: [ForumPetComponent,DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent],
   imports: [
     CommonModule,
     FormsModule,
