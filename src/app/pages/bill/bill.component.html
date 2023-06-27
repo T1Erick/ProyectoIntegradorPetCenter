@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Template de Factura</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Factura</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Información del Cliente:</h4>
+        <p>Nombre del Cliente</p>
+        <p>Dirección del Cliente</p>
+        <p>Teléfono del Cliente</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Información de la Factura:</h4>
+        <p>Número de Factura: 12345</p>
+        <p>Fecha de Emisión: 06/06/2023</p>
+      </div>
+    </div>
+    <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Producto 1</td>
+          <td>2</td>
+          <td>$10.00</td>
+          <td>$20.00</td>
+        </tr>
+        <tr>
+          <td>Producto 2</td>
+          <td>1</td>
+          <td>$15.00</td>
+          <td>$15.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-md-6 offset-md-6">
+        <h4>Total: $35.00</h4>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

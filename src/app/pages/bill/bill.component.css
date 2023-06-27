@@ -1,0 +1,34 @@
+/* Estilos para la factura */
+.container {
+    margin-top: 20px;
+    background-color: #aad2d4;
+  }
+  
+  h1 {
+    color: #161718;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  /* Estilos para los productos */
+  td {
+    padding: 5px;
+  }
+  
+  th {
+    background-color: #819ba5;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el total */
+  h4 {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
