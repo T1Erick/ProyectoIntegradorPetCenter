@@ -1,62 +1,13 @@
-<style>
-    body {
-      font-family: Arial, sans-serif;
-    }
 
-    header {
-      background-color: #272222;
-      padding: 5px;
-      color: #fff;
-      text-align: center;
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    
-    th, td {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-    
-    th {
-      background-color: orange;
-      font-weight: bold;
-      text-align: left;
-    }
-    
-    img {
-      max-width: 100px;
-      max-height: 100px;
-    }
-    
-    .actions {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .actions button {
-      padding: 5px 10px;
-    }
-    
-    .edit-button {
-      background-color: #f7941d;
-      color: white;
-    }
-    
-    .delete-button {
-      background-color: #f7941d;
-      color: white;
-    }
-  </style>
 <body>
 
     <header>
-      <h1>Lista de Productos</h1>
+      <div>
+        <h1>Lista de Productos</h1>
+      </div>
+
     </header>
-  
+
     <table>
       <thead>
         <tr>
@@ -70,42 +21,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Producto 1</td>
-          <td>Descripción del producto 1</td>
-          <td>$19.99</td>
-          <td><img src="/src/assets/img/productos/img4.jpg" alt="Producto 1"></td>
-          <td>2023-12-31</td>
-          <td>Categoría 1</td>
+        <tr *ngFor="let product of products">
+          <td>{{product.titulo}}</td>
+          <td>{{product.descripcion}}</td>
+          <td>{{product.precio}}$</td>
+          <td><img src="{{product.foto}}" ></td>
+          <td>{{product.fechaVencimiento}}</td>
+          <td>{{product.category.namecategory}}</td>
           <td class="actions">
-            <button class="edit-button">Editar</button>
-            <button class="delete-button">Eliminar</button>
+            <a [routerLink]="[ '/dashboard/register-products']" [state]="product" class="btn btn-primary">Actualizar</a>
+            <button class="delete-button" (click)="deleteProduct(product.id)">Eliminar</button>
           </td>
         </tr>
-        <tr>
-          <td>Producto 2</td>
-          <td>Descripción del producto 2</td>
-          <td>$29.99</td>
-          <td><img src="/src/assets/img/productos/img5.jpg" alt="Producto 2"></td>
-          <td>2023-12-31</td>
-          <td>Categoría 2</td>
-          <td class="actions">
-            <button class="edit-button">Editar</button>
-            <button class="delete-button">Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Producto 3</td>
-          <td>Descripción del producto 3</td>
-          <td>$39.99</td>
-          <td><img src="/src/assets/img/productos/img6.jpg" alt="Producto 3"></td>
-          <td>2023-12-31</td>
-          <td>Categoría 3</td>
-          <td class="actions">
-            <button class="edit-button">Editar</button>
-            <button class="delete-button">Eliminar</button>
-          </td>
-        </tr>
+
       </tbody>
     </table>
   </body>

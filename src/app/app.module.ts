@@ -11,6 +11,7 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
+import { ProductnamePipe } from './pipe/productname.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, PagesComponent, NofoundPagesComponent],
+  declarations: [AppComponent, PagesComponent, NofoundPagesComponent, ProductnamePipe],
   providers: [],
   bootstrap: [AppComponent],
   imports: [

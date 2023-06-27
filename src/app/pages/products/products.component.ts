@@ -10,11 +10,13 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit  {
-  constructor(private productService: ProductsService){}
+  constructor(private productService: ProductsService, private router: Router,){}
   ngOnInit():void{
     this.getProducts()
 
   }
+  searchTerm: string = '';
+  listaProductos: any[] = [];
   products: ProductsModel[]=[]
   getProducts(){
     this.productService.getAll().subscribe(
@@ -26,6 +28,7 @@ export class ProductsComponent implements OnInit  {
       }
     )
   }
+
 
 
 

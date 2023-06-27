@@ -58,15 +58,15 @@
       <h2>Registro de Categorias</h2>
       <p class="hint-text">Momento de agregar Categorias nuevas</p>
       <div class="form-group">
-        <input [(ngModel)]="categories.namecategory"  [(ngModel)]="selectedCategory.namecategory"  type="text" class="form-control" name="name" placeholder="Nombre de la categoria" required="required">
+        <input [(ngModel)]="categories.namecategory" [(ngModel)]="selectedCategory.namecategory"   type="text" class="form-control" name="name" placeholder="Nombre de la categoria" required="required">
       </div>
       <div class="form-group">
-        <input [(ngModel)]="categories.description"  [(ngModel)]="selectedCategory.description" type="text" class="form-control" name="name" placeholder="Descripcion de la categoria" required="required">
+        <input [(ngModel)]="categories.description"  [(ngModel)]="selectedCategory.description" type="text" class="form-control" name="description" placeholder="Descripcion de la categoria" required="required">
       </div>
       <div class="form-group">
         <ng-select [items]= "section"
-              [(ngModel)]="categories.sectionId"
-              [(ngModel)]="selectedCategory.sectionId"
+              [(ngModel)]="categories.section"
+              [(ngModel)]="selectedCategory.section"
               bindLabel= "namesection"
               name= "section"
               id= "section"
