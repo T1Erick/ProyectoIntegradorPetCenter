@@ -4,8 +4,9 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -20,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    NgSelectModule,
+    ReactiveFormsModule
 
 
   ],

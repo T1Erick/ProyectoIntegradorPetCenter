@@ -1,47 +1,59 @@
-
-  <div class="signup-form">
+<div class="signup-form">
     <div class="background-image-container"></div>
     <div class="register-box">
       <img class="logo" src="../../../assets/img/dashboard-client/logo1.png" alt="Pet Center">
-      <form action="" >
-        <h2>Registrate</h2>
-        <p class="hint-text">Los animales te amaran crea tu cuenta ahora</p>
+      <form (ngSubmit)="createUser()" [formGroup]="signupForm">
+        <h2>Regístrate</h2>
+        <p class="hint-text">Los animales te amarán, crea tu cuenta ahora</p>
         <div class="form-group">
-            <div class="row">
-                <div class="col">
-                    <input id="name" [(ngModel)]="users.name" type="text" class="form-control" name="name" placeholder="Nombres" required="required">
-                </div>
-                <div class="col">
-                    <input  [(ngModel)]="users.lastname"type="text" class="form-control" name="last_name" placeholder="Apellidos" required="required">
-                </div>
+          <div class="row">
+            <div class="col">
+              <input id="name" [(ngModel)]="users.name" formControlName="name" type="text" class="form-control" name="name" placeholder="Nombres" required pattern="[a-zA-Z\s]+">
+              <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">
+                <div *ngIf="signupForm.get('name')?.hasError('required')">Los nombres son requeridos.</div>
+                <div *ngIf="signupForm.get('name')?.hasError('pattern')">No deben contener números ni caracteres especiales.</div>
+              </div>
             </div>
+            <div class="col">
+              <input [(ngModel)]="users.lastname" formControlName="lastname" type="text" class="form-control" name="last_name" placeholder="Apellidos" required pattern="[a-zA-Z\s]+">
+              <div *ngIf="signupForm.get('lastname')?.invalid && (signupForm.get('lastname')?.dirty || signupForm.get('lastname')?.touched)">
+                <div *ngIf="signupForm.get('lastname')?.hasError('required')">Los apellidos son requeridos.</div>
+                <div *ngIf="signupForm.get('lastname')?.hasError('pattern')">No deben contener números ni caracteres especiales.</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="form-group">
-            <input [(ngModel)]="users.email" type="email" class="form-control" name="email" placeholder="Email" required="required">
+          <input [(ngModel)]="users.email" formControlName="email" type="email" class="form-control" name="email" placeholder="Email" required>
+          <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+            <div *ngIf="signupForm.get('email')?.hasError('required')">El correo electrónico es requerido.</div>
+            <div *ngIf="signupForm.get('email')?.hasError('email')">Ingresa un correo electrónico válido.</div>
+          </div>
         </div>
         <div class="form-group">
-            <input [(ngModel)]="users.password" type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
+          <input [(ngModel)]="users.password" formControlName="password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
+          <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+            <div *ngIf="signupForm.get('password')?.hasError('required')">La contraseña es requerida.</div>
+            <div *ngIf="signupForm.get('password')?.hasError('pattern')">- Al menos 8 caracteres de longitud
+                <br>
+                - Al menos 1 letra mayúscula  <br>
+                - Al menos 1 letra minúscula  <br>
+                - Al menos 1 número  <br>
+                - Al menos 1 carácter especial  <br></div>
+          </div>
         </div>
         <div class="form-group">
-            <input [(ngModel)]="passwordconfirm" type="text" class="form-control" name="confirm_password" placeholder="Confirmar Contraseña" >
+          <input  [(ngModel)]="passwordconfirm" formControlName="confirm_password" type="password" class="form-control" name="confirm_password" placeholder="Confirmar Contraseña" required>
+          <div *ngIf="signupForm.get('confirm_password')?.invalid && (signupForm.get('confirm_password')?.dirty || signupForm.get('confirm_password')?.touched)">
+            <div *ngIf="signupForm.get('confirm_password')?.hasError('required')">Debes confirmar tu contraseña.</div>
+            <div *ngIf="signupForm.get('confirm_password')?.hasError('mustMatch')">Las contraseñas no coinciden.</div>
+          </div>
         </div>
         <div class="form-group">
-            <label class="form-check-label">
-                <input type="checkbox" required="required"> Yo acepto
-                <a href="#">los terminos</a> &amp;
-                <a href="#">y Condiciones de seguridad</a>
-            </label>
+          <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary btn-lg btn-block">Crear Cuenta</button>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block"(click)="createUser()">Registarte</button>
-        </div>
-        <div class="text-center">Ya tienes una Cuenta ?
-          <a (click)="navigateToLogin()">Iniciar Sesion</a>
-      </div>
-    </form>
-
+      </form>
+      <div class="text-center">¿Ya tienes una cuenta? <a (click)="navigateToLogin()">Iniciar Sesion</a>
     </div>
-
-
   </div>
-
+  

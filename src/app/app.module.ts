@@ -11,6 +11,9 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -28,6 +31,9 @@ const routes: Routes = [
     PagesRoutingModule,
     AuthModule,
     PagesModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   exports: [RouterModule],
