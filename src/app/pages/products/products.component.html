@@ -9,8 +9,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <form>
-      <input type="text" placeholder="Buscar...">
-      <button type="submit">Buscar</button>
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar...">
+      <button type="submit"  [(ngModel)]="searchTerm">Buscar</button>
     </form>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown dropdown-categorias">
@@ -41,13 +41,13 @@
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-md-4"*ngFor="let product of products">
+    <div class="col-md-4"*ngFor="let product of products ">
       <div class="product-card">
         <img src="{{ product.foto }}" alt="Producto 1">
         <h4>{{ product.titulo }}</h4>
         <p>Precio: {{ product.precio }}$</p>
         <p>{{ product.descripcion }}</p>
-        <button>Agregar al carrito</button>
+        <button >Agregar al carrito</button>
       </div>
     </div>
   </div>

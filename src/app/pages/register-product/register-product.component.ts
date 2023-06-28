@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CategoryModel } from 'src/app/entities/category.model';
-import { CreateProductsModelDto } from 'src/app/entities/products.model';
+import { CreateProductsModelDto, ProductsModel, UpdateProductsModelDto } from 'src/app/entities/products.model';
 import { CategorService } from 'src/app/services/category.service.service';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -15,10 +15,21 @@ export class RegisterProductComponent implements OnInit {
 
   ngOnInit():void{
     this.getCategory()
+    this.updatingVerification()
 
   }
 
   categories: CategoryModel[]=[]
+  updating: boolean = false;
+  productUpdate: UpdateProductsModelDto={
+    id: '',
+    titulo:'',
+    descripcion:'',
+    precio:0,
+    foto: '',
+    fechaVencimiento:''
+
+  }
 
   products : CreateProductsModelDto={
     category: '',
@@ -53,9 +64,41 @@ export class RegisterProductComponent implements OnInit {
 
     }
   }
+  updatingVerification(){
+    if (history.state.id) {
+
+      this.prepareEventUpdate()
+      this.updating = true
+
+    } else {
+      this.updating = false;
+    }
+  }
+  prepareEventUpdate(){
+
+    this.productUpdate.id= history.state.id
+    this.productUpdate.titulo= history.state.titulo
+    this.productUpdate.precio = history.state.precio
+    this.productUpdate.descripcion= history.state.descripcion
+    this.productUpdate.foto = history.state.foto
+    this.productUpdate.fechaVencimiento =history.state.fechaVencimiento
+    this.productUpdate.category= history.state.category.id
+
+
+  }
+  updateProduct(){
+    this.registerProductService.update(this.productUpdate.id,this.productUpdate).subscribe(
+      response =>{console.log(response)}
+
+    )
+
+  }
 
   getos(){
     console.log(this.products.category)
+  }
+  navigateToListado() {
+    this.router.navigateByUrl("/dashboard/list-product");
   }
 
 }

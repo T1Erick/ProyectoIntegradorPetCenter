@@ -58,23 +58,24 @@
       <h2>Registro de productos</h2>
       <p class="hint-text">Momento de agregar productos</p>
       <div class="form-group">
-        <input [(ngModel)]="products.titulo" type="text" class="form-control" name="name" placeholder="Nombre del producto" required="required">
+        <input [(ngModel)]="products.titulo" [(ngModel)]="productUpdate.titulo" type="text" class="form-control" name="name" placeholder="Nombre del producto" required="required">
       </div>
       <div class="form-group">
-          <input [(ngModel)]="products.precio"type="email" class="form-control" name="email" placeholder="Precio" required="required">
+          <input [(ngModel)]="products.precio" [(ngModel)]="productUpdate.precio"type="text" class="form-control" name="email" placeholder="Precio" required="required">
       </div>
       <div class="form-group">
-          <input [(ngModel)]="products.descripcion" type="text" class="form-control" name="password" placeholder="Descripcion" required="required">
+          <input [(ngModel)]="products.descripcion" [(ngModel)]="productUpdate.descripcion" type="text" class="form-control" name="password" placeholder="Descripcion" required="required">
       </div>
       <div class="form-group">
-          <input [(ngModel)]="products.foto"type="text" class="form-control" name="confirm_password" placeholder="Url de la imagen" required="required">
+          <input [(ngModel)]="products.foto" [(ngModel)]="productUpdate.foto" type="text" class="form-control" name="confirm_password" placeholder="Url de la imagen" required="required">
       </div>
       <div class="form-group">
-        <input [(ngModel)]="products.fechaVencimiento"type="text" class="form-control" name="confirm_password" placeholder="Fecha de vencimiento" required="required">
+        <input [(ngModel)]="products.fechaVencimiento" [(ngModel)]="productUpdate.fechaVencimiento" type="text" class="form-control" name="confirm_password" placeholder="Fecha de vencimiento" required="required">
     </div>
     <div>
       <ng-select [items]= "categories"
             [(ngModel)]="products.category"
+            [(ngModel)]="productUpdate.category"
             bindLabel= "namecategory"
             name= "category"
             id= "category"
@@ -85,8 +86,12 @@
     </div>
 
       <div class="registro">
-          <button (click)="createProducts()" type="submit" >Registar</button>
+          <button  *ngIf="!updating"(click)="createProducts()" type="submit" >Registar</button>
+          <button *ngIf="updating" (click)="updateProduct()" type="submit" >Actualizar</button>
       </div>
+      <div class="registro">
+        <button (click)="navigateToListado()" type="submit" >Listado</button>
+    </div>
 
   </form>
 

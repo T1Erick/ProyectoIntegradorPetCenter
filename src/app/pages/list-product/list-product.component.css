@@ -1,0 +1,59 @@
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #272222;
+      padding: 5px;
+      color: #fff;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: orange;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .actions button {
+      padding: 5px 10px;
+    }
+
+    .edit-button {
+      background-color: #f7941d;
+      color: white;
+      margin-bottom: 15px;
+      margin-top: 18px;
+    }
+
+    .delete-button {
+      background-color: #f7941d;
+      color: white;
+    }
+

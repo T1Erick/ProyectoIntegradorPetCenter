@@ -12,6 +12,7 @@ import { RegisterCategoryComponent } from './register-category/register-category
 import { RegisterSectionComponent } from './register-section/register-section.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { ListProductComponent } from './list-product/list-product.component';
+import { BillComponent } from './bill/bill.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
       {path: 'register-seccion', component: RegisterSectionComponent},
       {path:'perfil',component:ForumPetComponent},
       {path:'dashboard-admin', component:DashboardAdminComponent},
-      {path:'list-product', component:ListProductComponent}
+      {path:'list-product', component:ListProductComponent},
+      {path:'bill', component: BillComponent}
 
     ]
   },

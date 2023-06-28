@@ -8,10 +8,10 @@ export interface CategoryModel{
 }
 
 export interface CreateCategoryModelDto extends Omit<CategoryModel,'id' | 'section'>{
-  sectionId:string
+  section:string
 }
 
-export interface UpdateCategoryModelDto extends Partial<CategoryModel>{
+export interface UpdateCategoryModelDto extends Omit<CategoryModel, 'section'>{
   id:string;
-  sectionId?:string
+  section?:string
 }

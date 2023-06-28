@@ -20,7 +20,7 @@ export class RegisterCategoryComponent implements OnInit{
     id: '',
     namecategory:'',
     description:'',
-    sectionId: '',
+    section: '',
 
 
   }
@@ -28,9 +28,12 @@ export class RegisterCategoryComponent implements OnInit{
   section:SectionModel[]=[]
   category: CategoryModel[]=[]
   categories : CreateCategoryModelDto={
-    sectionId: '',
+
     namecategory: '',
-    description: ''
+    description: '',
+    section: '',
+
+
   }
   getSection(){
     this.sectionservice.getAll().subscribe(
@@ -44,8 +47,8 @@ export class RegisterCategoryComponent implements OnInit{
     this.registerCategory.getAll().subscribe(
 
       response =>{
-        console.log(this.category)
         this.category = response;
+        console.log(this.category)
 
       }
     )
@@ -69,13 +72,17 @@ export class RegisterCategoryComponent implements OnInit{
 
   }
   editCategory(category:CategoryModel){
-    this.selectedCategory = category;
+    this.selectedCategory.namecategory = category.namecategory;
+    this.selectedCategory.description= category.description;
+    this.selectedCategory.id= category.id
+    this.selectedCategory.section= category.section.id
+
+    console.log(this.selectedCategory)
     this.updating= true
-
-
   }
   updateCategory(id:CategoryModel['id'],category:UpdateCategoryModelDto){
     this.registerCategory.update(id,category).subscribe(
+
       response =>{
         console.log(response)
       }

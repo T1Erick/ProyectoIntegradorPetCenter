@@ -28,7 +28,7 @@ export class ProductsService {
 
   update( id: ProductsModel['id'],products:UpdateProductsModelDto):Observable<ProductsModel>{
     const url= `${this.API_URL}/${id}`;
-    return this.httpClient.put<ProductsModel>(url,products);
+    return this.httpClient.patch<ProductsModel>(url,products);
   }
 
   destroy(id: ProductsModel['id']):Observable<boolean>{
