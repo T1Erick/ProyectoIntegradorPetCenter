@@ -6,15 +6,14 @@
   <link rel="stylesheet" href="../bill/bill.component.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="tabla">
     <h1>Factura</h1>
     <hr>
     <div class="row">
       <div class="col-md-6">
         <h4>Información del Cliente:</h4>
-        <p>Nombre del Cliente</p>
-        <p>Dirección del Cliente</p>
-        <p>Teléfono del Cliente</p>
+        <p>Nombre del Cliente:</p>
+        <p>Email del Cliente:</p>
       </div>
       <div class="col-md-6">
         <h4>Información de la Factura:</h4>
@@ -25,32 +24,30 @@
     <hr>
     <table class="table">
       <thead>
-        <tr>
-          <th>Producto</th>
+        <tr  *ngFor="let product of products ">
+          <th>{{ product.titulo }}</th>
           <th>Cantidad</th>
           <th>Precio Unitario</th>
           <th>Total</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr >
           <td>Producto 1</td>
           <td>2</td>
           <td>$10.00</td>
           <td>$20.00</td>
         </tr>
-        <tr>
-          <td>Producto 2</td>
-          <td>1</td>
-          <td>$15.00</td>
-          <td>$15.00</td>
-        </tr>
+
       </tbody>
     </table>
     <div class="row">
       <div class="col-md-6 offset-md-6">
         <h4>Total: $35.00</h4>
       </div>
+    </div>
+    <div>
+      <button (click)="imprimirFactura()">Imprimir</button>
     </div>
   </div>
 </body>
