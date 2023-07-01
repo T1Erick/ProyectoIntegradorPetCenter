@@ -21,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, PagesComponent, NofoundPagesComponent, ProductnamePipe],
+  declarations: [AppComponent, PagesComponent, NofoundPagesComponent],
   providers: [],
   bootstrap: [AppComponent],
   imports: [

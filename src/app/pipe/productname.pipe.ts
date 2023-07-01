@@ -7,8 +7,11 @@ export class ProductnamePipe implements PipeTransform {
 
   transform(productos: any[], term: string): any[] {
     if (!productos || !term) {
+
       return productos;
+
     }
+    console.log(productos)
 
     return productos.filter(producto =>
       producto.titulo.toLowerCase().includes(term.toLowerCase())

@@ -4,8 +4,31 @@
   <title>Template de Factura</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../bill/bill.component.css">
+   <!-- Google Web Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg  navbar-dark py-3 py-lg-0 px-lg-5">
+      <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+        <div class="navbar-nav mr-auto py-0">
+          <a  class="navbar-brand d-none d-lg-block">
+            <h1 class="m-0 display-5 text-capitalize">
+                <img src="../../../assets/img/dashboard-client/logo2.png" alt="">
+              <span class="text-primary">Pet</span><span class = "center">Center</span>
+            </h1>
+          </a>
+          <a href="/dashboard/perfil" class="nav-item nav-link active">Perfil</a>
+          <a href="/dashboard/products" class="nav-item nav-link">Tienda</a>
+          <a href="/dashboard/forum" class="nav-item nav-link">Red Social</a>
+          <a href="" class="nav-item nav-link">Contactanos</a>
+        </div>
+      </div>
+    </nav>
+  </div>
   <div class="container" id="tabla">
     <h1>Factura</h1>
     <hr>
@@ -24,26 +47,27 @@
     <hr>
     <table class="table">
       <thead>
-        <tr  *ngFor="let product of products ">
-          <th>{{ product.titulo }}</th>
+        <tr >
+          <th>Producto</th>
           <th>Cantidad</th>
           <th>Precio Unitario</th>
           <th>Total</th>
         </tr>
       </thead>
       <tbody>
-        <tr >
-          <td>Producto 1</td>
-          <td>2</td>
-          <td>$10.00</td>
-          <td>$20.00</td>
+        <tr *ngFor="let carro of products ; let i = index" >
+          <td>{{carro.titulo}}</td>
+          <td><input name="cantidad" type="number" min="1" max="20" [(ngModel)]="cantidad[i]" (change)="multipliclar(i,carro.precio)" ></td>
+          <td>{{carro.precio}}$</td>
+          <td>{{totalU[i]}}$</td>
         </tr>
-
       </tbody>
     </table>
     <div class="row">
       <div class="col-md-6 offset-md-6">
-        <h4>Total: $35.00</h4>
+        <h4>{{totalF}}$</h4>
+        <h4>{{impuesto}}$</h4>
+        <h4>{{totalFactura}}$</h4>
       </div>
     </div>
     <div>

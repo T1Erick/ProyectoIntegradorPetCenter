@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit  {
     this.getProducts();
     this.getSeccion();
     this.getCategories();
+    sessionStorage.clear();
 
   }
   searchTerm: string = '';
@@ -57,13 +58,18 @@ export class ProductsComponent implements OnInit  {
 
   }
   agregarProduct(product: ProductsModel){
-    this.productosSeleccionados.push(product);
-    console.log('Producto agregado:', product);
-    console.log('Listado', this.productosSeleccionados)
+    const itsselected = this.productosSeleccionados.includes(product, 0)
+    if (itsselected === false) {
+      this.productosSeleccionados.push(product);
+    }
 
   }
   NavigateToBill(){
     this.router.navigateByUrl("dashboard/bill");
+    for (let carro = 0; carro < this.productosSeleccionados.length; carro++) {
+      const element = JSON.stringify(this.productosSeleccionados[carro]);
+      sessionStorage.setItem(carro.toString(),element)
+    }
   }
 
 
