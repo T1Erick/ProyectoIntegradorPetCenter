@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     photo: '',
     email: '',
     password: '',
-    rol: '6a0cec44-61d8-467f-95d0-c80acf7d9b17'
+    rol: '9e8c17b6-be00-4df4-9c67-710b26d30b69'
   };
 
   constructor(
