@@ -90,6 +90,9 @@ export class RegisterCategoryComponent implements OnInit{
   }
 
   deleteCategory(id:CategoryModel['id']){
+    if (!confirm('¿Estás seguro de que deseas eliminar esta categoria recuerda que antes de eliminar esta categoria debes eliminar todos los productos que estan dentro de esta categoria?')) {
+      return; // Si el usuario cancela, no se ejecuta la eliminaciónm
+    }
     this.registerCategory.destroy(id).subscribe(
       response=>{
         this.category = this.category.filter(category => category.id != id);

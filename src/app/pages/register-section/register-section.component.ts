@@ -64,6 +64,9 @@ export class RegisterSectionComponent implements OnInit {
   }
 
   deleteSection(id:SectionModel['id']){
+    if (!confirm('¿Estás seguro de que deseas eliminar esta seccion?')) {
+      return; // Si el usuario cancela, no se ejecuta la eliminaciónm
+    }
     this.sectionService.destroy(id).subscribe(
       response => {
         this.seccion= this.seccion.filter(seccion => seccion.id != id);

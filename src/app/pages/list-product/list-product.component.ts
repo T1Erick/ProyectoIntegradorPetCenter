@@ -41,15 +41,18 @@ export class ListProductComponent implements OnInit{
     this.updating= true
   }
 
-  deleteProduct(id: ProductsModel['id']){
-
+  deleteProduct(id: ProductsModel['id']) {
+    // Mostrar mensaje de confirmación
+    if (!confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+      return; // Si el usuario cancela, no se ejecuta la eliminación
+    }
+  
     this.productsService.destroy(id).subscribe(
-      response =>{
-        this.products = this.products.filter(products => products.id != id);
-        console.log(response)
+      response => {
+        this.products = this.products.filter(products => products.id !== id);
+        console.log(response);
       }
-    )
-
+    );
   }
   updateProducts(id:ProductsModel['id'],product: UpdateProductsModelDto){
     this.productsService.update(id,product).subscribe(
