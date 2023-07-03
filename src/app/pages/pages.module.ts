@@ -15,6 +15,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { ListProductComponent } from './list-product/list-product.component';
 import { BillComponent } from './bill/bill.component';
 import { ProductnamePipe } from '../pipe/productname.pipe';
+import { SharedModule } from "../shared/shared.module";
 
 
 
@@ -22,14 +23,16 @@ import { ProductnamePipe } from '../pipe/productname.pipe';
 
 
 @NgModule({
-  declarations: [ForumPetComponent,DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent,ProductnamePipe],
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule,
-    ReactiveFormsModule,
-    NgSelectModule],
-  exports: [ForumPetComponent,DashboardClientComponent, ProductsComponent,RegisterProductComponent],
+    declarations: [ForumPetComponent, DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe],
+    exports: [ForumPetComponent, DashboardClientComponent, ProductsComponent, RegisterProductComponent],
+    imports: [
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        RouterModule,
+        ReactiveFormsModule,
+        NgSelectModule,
+        SharedModule
+    ]
 })
 export class PagesModule {}

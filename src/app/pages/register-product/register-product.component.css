@@ -14,7 +14,6 @@
 
 }
 
-
 .form-control {
   height: 40px;
   box-shadow: none;
@@ -22,18 +21,19 @@
 }
 
 .form-control:focus {
-  border-color: #5cb85c;
+  border-color: black;
+  background: #ed6436;
 }
 
 .form-control,
 .btn {
   border-radius: 3px;
-  background: #f7941d;
-  border: 3px black solid;
+  background: #ed6436;
+  border: 3px solid #ed6436;
 
 }
 .register-box ::placeholder{
-  color:white
+  color:white;
 }
 
 .signup-form {
@@ -51,17 +51,14 @@
 }
 .custom-ng-select {
   border-radius: 3px;
-  background: #f7941d;
-  border: 3px black solid;
+  background: #ed6436;
+  border: 3px solid #ed6436;
   margin-bottom: 20px
-
 }
+
 .registro{
   margin-bottom: 20px;
 }
-
-
-
 
 .signup-form h2:before {
   left: 0;
@@ -81,19 +78,27 @@ input:focus,
 input:valid,
 textarea:focus,
 textarea:valid {
-  background-color: white;
+  background-color: solid  #ed6436;
+  border: solid #ed6436 ;
   color: black;
 }
 
 .registro button {
+  border-radius: 3px;
   display: block;
   margin: 0 auto;
-  background-color: black;
+  background-color: #ed6436;
+  border: #ed6436;
   color: white;
   font-size: 18px;
   padding: 10px 20px;
 }
 
+.registro button:hover{
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
 
 .signup-form .form-group {
   margin-bottom: 20px;
@@ -119,7 +124,7 @@ textarea:valid {
 }
 
 .signup-form a {
-  color: #000000;
+  color: #ed6436;
   text-decoration: underline;
 }
 
@@ -128,7 +133,7 @@ textarea:valid {
 }
 
 .signup-form form a {
-  color: #f7941d;
+  color: #ed6436;
   text-decoration: none;
 }
 
@@ -289,7 +294,7 @@ a {
   transition: 0.3s;
 }
 .overlay a:hover, .overlay a:focus {
-  color: #ff9900;
+  color: #ed6436;
 }
 .overlay .closebtn {
   position: absolute;
