@@ -1,47 +1,54 @@
-
 .background-image-container {
-  background-image: url('https://img.freepik.com/vector-gratis/portada-facebook-mascota-sentada-dibujada-mano_23-2149776410.jpg');
+  background-image: url("https://img.freepik.com/vector-gratis/portada-facebook-mascota-sentada-dibujada-mano_23-2149776410.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
+
 .register-box {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .form-control {
   height: 40px;
   box-shadow: none;
   color: black;
+  background-color: #ed6436;
+  border-radius: 3px;
+  border: 3px solid #ed6436;
 }
 
 .form-control:focus {
-  border-color: #5cb85c;
+  border-color: black;
+  border-radius: 5px;
 }
 
-.form-control,
 .btn {
   border-radius: 3px;
-  background: #f7941d;
-  border: 3px black solid;
-
+  background: #ed6436;
+  border: 3px #ed6436;
 }
-.register-box ::placeholder{
-  color:white
+
+.btn:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.register-box ::placeholder {
+  color: white;
 }
 
 .signup-form {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .signup-form h2 {
@@ -60,6 +67,7 @@
   position: absolute;
   top: 50%;
   z-index: 2;
+  border-color: black;
 }
 
 .signup-form h2:before {
@@ -75,8 +83,6 @@
   margin-bottom: 30px;
   text-align: center;
 }
-
-
 
 .signup-form .form-group {
   margin-bottom: 20px;
@@ -102,19 +108,11 @@
 }
 
 .signup-form a {
-  color: #000000;
-  text-decoration: underline;
+  color: #ed6436;
+  text-decoration: dashed;
 }
 
 .signup-form a:hover {
   text-decoration: none;
-}
-
-.signup-form form a {
-  color: #f7941d;
-  text-decoration: none;
-}
-
-.signup-form form a:hover {
-  text-decoration: underline;
+  color: black;
 }
