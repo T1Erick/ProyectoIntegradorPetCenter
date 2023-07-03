@@ -15,6 +15,7 @@ export class BillComponent implements OnInit {
     this.imprimirButton = null;
 
   }
+  showButton = true;
   Jsonusuario= this.cokkieService.get('user')
   payload: any = jwt_decode(this.Jsonusuario);
   namebill = this.payload.name;
@@ -82,6 +83,7 @@ export class BillComponent implements OnInit {
 
   imprimirFactura() {
     window.print();
+    this.showButton = false;
   }
 
 

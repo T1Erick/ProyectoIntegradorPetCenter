@@ -72,7 +72,7 @@
       </div>
     </div>
     <div>
-      <button (click)="imprimirFactura()">Imprimir</button>
+      <button (click)="imprimirFactura()" *ngIf="showButton">Imprimir</button>
     </div>
   </div>
 </body>
