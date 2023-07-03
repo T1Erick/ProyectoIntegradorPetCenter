@@ -41,8 +41,7 @@ Login():void{
           console.log(this.cookkieService.get('user'))
           const payload: any = jwt_decode(dataJson);
           const role = payload.role.namerol
-
-          if (role === 'User') {
+          if (role === 'Usuario') {
             this.router.navigateByUrl("/dashboard/dashboard-client")
 
           } if (role === 'Admin') {

@@ -40,6 +40,7 @@ h4 {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+<<<<<<< HEAD
 
   background-color: #161718;
 }
@@ -71,6 +72,19 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 
+=======
+  background-color: black; /* Cambiado a color negro */
+}
+
+.text-primary {
+  color: #ED6436 !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #c53f12 !important;
+}
+
+>>>>>>> 732e7a503a794942766cb02ce268d4a79114bff6
 .navbar-dark .navbar-nav .nav-link {
   padding: 30px 20px;
   font-size: 18px;
@@ -82,9 +96,14 @@ a.text-primary:hover, a.text-primary:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #181818;
+<<<<<<< HEAD
   background: #ed6436;
 }
 
 
 
 
+=======
+  background: #ED6436;
+}
+>>>>>>> 732e7a503a794942766cb02ce268d4a79114bff6

@@ -1,3 +1,36 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: black; /* Cambiado a color negro */
+}
+
+.text-primary {
+  color: #ED6436 !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #c53f12 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  padding: 30px 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #F2F2F4;
+  outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #181818;
+  background: #ED6436;
+}
+
+
 .background-image-container {
   background-image: url(../../../assets/img/adim.jpg);
   background-position: center;
@@ -203,7 +236,9 @@ a {
   transition: all .3s ease-in-out;
 }
 
-h1,
+h1{
+  color: whitesmoke;
+}
 h2,
 h3,
 h4,
@@ -215,7 +250,7 @@ h6 {
   padding: 0 0 10px 0;
   font-weight: normal;
   line-height: normal;
-  color: #111111;
+  color: black;
   margin: 0
 }
 
