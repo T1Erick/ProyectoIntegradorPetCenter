@@ -63,6 +63,7 @@ export class BillComponent implements OnInit {
     this.impuesto = iva * this.totalF
     this.impuesto = parseFloat(this.impuesto.toFixed(2))
     this.totalFactura= this.impuesto + this.totalF
+    this.totalFactura= parseFloat(this.totalFactura.toFixed(2))
 
   }
 

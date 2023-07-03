@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     photo: '',
     email: '',
     password: '',
-    rol: '9e8c17b6-be00-4df4-9c67-710b26d30b69'
+    rol: 'b161ae54-1aea-485f-9c80-0f9780ea69e2'
   };
   updateuser: UpdateUserModelDto={
     id: '',
