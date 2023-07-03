@@ -23,8 +23,8 @@ import { CategryprductPipe } from '../pipe/categryprduct.pipe';
 
 
 @NgModule({
-    declarations: [ForumPetComponent, DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe,CategryprductPipe],
-    exports: [ForumPetComponent, DashboardClientComponent, ProductsComponent, RegisterProductComponent],
+    declarations: [ DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe,CategryprductPipe],
+    exports: [DashboardClientComponent, ProductsComponent, RegisterProductComponent],
     imports: [
         CommonModule,
         FormsModule,
