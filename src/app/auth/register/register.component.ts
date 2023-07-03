@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { CreateUserModelDto } from 'src/app/entities/user.model';
+import { CreateUserModelDto, UpdateUserModelDto } from 'src/app/entities/user.model';
 import { ClientService } from 'src/app/services/client.service';
 
 @Component({
@@ -20,6 +20,14 @@ export class RegisterComponent implements OnInit {
     password: '',
     rol: 'b161ae54-1aea-485f-9c80-0f9780ea69e2'
   };
+  updateuser: UpdateUserModelDto={
+    id: '',
+    name:'',
+    lastname: '',
+    photo:'',
+    email: '',
+    password:''
+  }
 
   constructor(
     private router: Router,
@@ -74,5 +82,11 @@ export class RegisterComponent implements OnInit {
     } catch (error) {
       console.log(error);
     }
+  }
+  updateDoctor(user: UpdateUserModelDto) {
+    const response = this.clientsService.updateUsers(user.id, user)
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 }
