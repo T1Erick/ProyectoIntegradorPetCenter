@@ -4,6 +4,7 @@ import { CategoryModel } from 'src/app/entities/category.model';
 import jwt_decode from 'jwt-decode';
 
 import { CreateProductsModelDto, ProductsModel } from 'src/app/entities/products.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bill',
@@ -11,11 +12,13 @@ import { CreateProductsModelDto, ProductsModel } from 'src/app/entities/products
   styleUrls: ['./bill.component.css']
 })
 export class BillComponent implements OnInit {
-  constructor(private cokkieService: CookieService) {
+  fechaActual: Date;
+  constructor(private cokkieService: CookieService,private router: Router) {
     this.imprimirButton = null;
+    this.fechaActual = new Date();
 
   }
-  showButton = true;
+
   Jsonusuario= this.cokkieService.get('user')
   payload: any = jwt_decode(this.Jsonusuario);
   namebill = this.payload.name;
@@ -83,7 +86,11 @@ export class BillComponent implements OnInit {
 
   imprimirFactura() {
     window.print();
-    this.showButton = false;
+
+  }
+  deletecookie(){
+    this.cokkieService.delete('user')
+    this.router.navigateByUrl("/login")
   }
 
 

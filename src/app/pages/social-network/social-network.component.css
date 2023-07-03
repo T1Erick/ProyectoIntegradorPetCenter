@@ -1,26 +1,90 @@
-.container-fluid {
-    width: 100%;
-	  float: left;
-	  background-color: #272222;
-	  height: auto;
-	  background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
-}
-button{
-    border-radius: 3px;
-    display: block;
-    margin: 0 auto;
-    background-color: #ed6436;
-    border: #ed6436;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-  }
+/* Estilos para la factura */
+.container {
+  margin-top: 70px;
+  background-color: #ed643621;
+  margin-bottom: 70px;
 
-  button:hover {
-    color: #fff;
-    background-color: black;
-    border-color: black;
-  }
+}
+
+h1 {
+  color: #161718;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+}
+
+/* Estilos para los productos */
+td {
+  padding: 5px;
+}
+
+th {
+  background-color:#ed643686;
+  font-weight: bold;
+}
+
+/* Estilos para el total */
+h4 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  background-color: #161718;
+}
+.center{color: white;}
+
+button{
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  background-color: #ed6436;
+  border: #ed6436;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.text-primary {
+  color: #ed6436 !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #ed6436 !important;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  padding: 30px 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #F2F2F4;
+  outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #181818;
+  background: #ed6436;
+}
+
+
+
 

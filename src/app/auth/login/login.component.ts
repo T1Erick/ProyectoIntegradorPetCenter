@@ -42,7 +42,7 @@ Login():void{
           const payload: any = jwt_decode(dataJson);
           const role = payload.role.namerol
 
-          if (role === 'Usuario') {
+          if (role === 'User') {
             this.router.navigateByUrl("/dashboard/dashboard-client")
 
           } if (role === 'Admin') {

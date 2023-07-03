@@ -11,7 +11,7 @@ html {
      scroll-behavior: smooth;
 }
 body {
-     color: #666666;
+     color:black;
      font-size: 14px;
      font-family: 'Josefin Sans', sans-serif;;
      line-height: 1.80857;
@@ -19,7 +19,7 @@ body {
      overflow-x: hidden;
 }
 a {
-     color: #1f1f1f;
+     color: black;
      text-decoration: none !important;
      outline: none !important;
      -webkit-transition: all .3s ease-in-out;
@@ -169,7 +169,7 @@ a {
 .section_footer{
 	width: 100%;
 	float: left;
-	background-color: #272222;
+	background-color: black;
 	height: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;

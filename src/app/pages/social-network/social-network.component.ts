@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { CreatePublicationModelDto, PublicationModel } from 'src/app/entities/publication.model';
 import { PublicationService } from 'src/app/services/publication.service';
 import jwt_decode from 'jwt-decode';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-social-network',
@@ -10,7 +11,7 @@ import jwt_decode from 'jwt-decode';
   styleUrls: ['./social-network.component.css']
 })
 export class SocialNetworkComponent implements OnInit {
-  constructor(private publicationService: PublicationService, private cokkieService: CookieService ){}
+  constructor(private publicationService: PublicationService, private cokkieService: CookieService ,private router : Router ){}
   ngOnInit(): void {
     this.getPublications()
 
@@ -52,6 +53,10 @@ export class SocialNetworkComponent implements OnInit {
 
     }
 
+  }
+  deletecookie(){
+    this.cokkieService.delete('user')
+    this.router.navigateByUrl("/login")
   }
 
 }

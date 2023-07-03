@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardClientComponent } from './dashboard-client/dashboard-client.component';
-import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
 import { RouterModule } from '@angular/router';
 import { SocialNetworkComponent } from './social-network/social-network.component';
@@ -24,8 +23,8 @@ import { CategryprductPipe } from '../pipe/categryprduct.pipe';
 
 
 @NgModule({
-    declarations: [ForumPetComponent, DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe,CategryprductPipe],
-    exports: [ForumPetComponent, DashboardClientComponent, ProductsComponent, RegisterProductComponent],
+    declarations: [ DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe,CategryprductPipe],
+    exports: [ DashboardClientComponent, ProductsComponent, RegisterProductComponent],
     imports: [
         CommonModule,
         FormsModule,

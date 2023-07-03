@@ -24,7 +24,7 @@
           <a href="/dashboard/perfil" class="nav-item nav-link active">Perfil</a>
           <a href="/dashboard/products" class="nav-item nav-link">Tienda</a>
           <a href="/dashboard/forum" class="nav-item nav-link">Red Social</a>
-          <a href="" class="nav-item nav-link">Contactanos</a>
+          <a (click)="deletecookie()" class="nav-item nav-link">Cerrar Sesion</a>
         </div>
       </div>
     </nav>
@@ -41,8 +41,7 @@
       </div>
       <div class="col-md-6">
         <h4>Información de la Factura:</h4>
-        <p>Número de Factura: 12345</p>
-        <p>Fecha de Emisión: 06/06/2023</p>
+        <p>Fecha de Emisión: {{ fechaActual | date:'dd/MM/yyyy' }}</p>
       </div>
     </div>
     <hr>
@@ -62,17 +61,19 @@
           <td>{{carro.precio}}$</td>
           <td>{{totalU[i]}}$</td>
         </tr>
+        <div class="mt-5">
+          <div class="col-md-8 offset-md-11">
+            <h4>Total de la Compra:</h4>
+            <p ><strong>Total unitario:</strong> {{totalF}}$</p>
+            <p> <strong>Impuesto 12%:</strong> {{impuesto}}$</p>
+            <p> <strong>Total:</strong> {{totalFactura}}$</p>
+          </div>
+        </div>
       </tbody>
     </table>
-    <div class="row">
-      <div class="col-md-6 offset-md-6">
-        <h4>Total unitario: {{totalF}}$</h4>
-        <h4>Impuesto 12%: {{impuesto}}$</h4>
-        <h4>Total: {{totalFactura}}$</h4>
-      </div>
-    </div>
+
     <div>
-      <button (click)="imprimirFactura()" *ngIf="showButton">Imprimir</button>
+      <button (click)="imprimirFactura()" >Imprimir</button>
     </div>
   </div>
 </body>
