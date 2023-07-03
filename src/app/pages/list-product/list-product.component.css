@@ -1,59 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-    }
+header {
+  background-color: #272222;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
 
-    header {
-      background-color: #272222;
-      padding: 5px;
-      color: #fff;
-      text-align: center;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
 
-    th, td {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
+th {
+  background-color: #ed6436;
+  font-weight: bold;
+  text-align: left;
+}
 
-    th {
-      background-color: orange;
-      font-weight: bold;
-      text-align: left;
-    }
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
 
-    img {
-      max-width: 100px;
-      max-height: 100px;
-    }
+.actions {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .actions {
-      display: flex;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.actions button {
+  padding: 5px 10px;
+}
 
-    .actions button {
-      padding: 5px 10px;
-    }
+.btn {
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  background-color: #ed6436;
+  border: solid #ed6436;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
 
-    .edit-button {
-      background-color: #f7941d;
-      color: white;
-      margin-bottom: 15px;
-      margin-top: 18px;
-    }
+.btn:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
 
-    .delete-button {
-      background-color: #f7941d;
-      color: white;
-    }
+.delete-button {
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  background-color: #ed6436;
+  border: solid #ed6436;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+}
 
+.delete-button:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}

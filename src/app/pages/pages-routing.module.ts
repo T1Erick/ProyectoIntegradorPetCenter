@@ -13,22 +13,24 @@ import { RegisterSectionComponent } from './register-section/register-section.co
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { ListProductComponent } from './list-product/list-product.component';
 import { BillComponent } from './bill/bill.component';
+import { AdminGuard } from '../guard/admin.guard';
+import { UserGuard } from '../guard/user.guard';
 
 
 const routes: Routes = [
   {
     path: 'dashboard', component: PagesComponent,
     children: [
-      {path: 'dashboard-client', component: DashboardClientComponent},
-      {path:'forum', component: SocialNetworkComponent},
-      {path:'products', component:ProductsComponent},
-      {path:'register-products', component: RegisterProductComponent},
-      {path:'register-category', component: RegisterCategoryComponent},
-      {path: 'register-seccion', component: RegisterSectionComponent},
-      {path:'perfil',component:ForumPetComponent},
-      {path:'dashboard-admin', component:DashboardAdminComponent},
-      {path:'list-product', component:ListProductComponent},
-      {path:'bill', component: BillComponent}
+      {path: 'dashboard-client', component: DashboardClientComponent, canActivate:[UserGuard]},
+      {path:'forum', component: SocialNetworkComponent , canActivate:[UserGuard]},
+      {path:'products', component:ProductsComponent, canActivate:[UserGuard]},
+      {path:'register-products', component: RegisterProductComponent,canActivate: [AdminGuard]},
+      {path:'register-category', component: RegisterCategoryComponent ,canActivate: [AdminGuard]},
+      {path: 'register-seccion', component: RegisterSectionComponent,canActivate: [AdminGuard]},
+      {path:'perfil',component:ForumPetComponent, canActivate:[UserGuard]},
+      {path:'dashboard-admin', component:DashboardAdminComponent,canActivate: [AdminGuard]},
+      {path:'list-product', component:ListProductComponent,canActivate: [AdminGuard]},
+      {path:'bill', component: BillComponent, canActivate:[UserGuard]}
 
     ]
   },

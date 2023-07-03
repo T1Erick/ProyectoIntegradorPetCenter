@@ -33,7 +33,7 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-        
+
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -58,6 +58,9 @@
                     <li>Ocupación: Estudiante</li>
                 </ul>
             </div>
+            <div>
+              <button (click)="deletecookie()">Cerrar Session</button>
+            </div>
 
             <div class="profile-activities">
                 <h2>Actividades Recientes</h2>
@@ -71,13 +74,15 @@
                           <div class="form-group">
                             <textarea class="form-control" rows="2" placeholder="Escribe un comentario"></textarea>
                           </div>
-              
+
                           <!-- <button type="submit" class="btn btn-primary">Comentar</button> -->
+                          <div class="botones">
                           <a href="#" class="card-link">Me gusta</a>
                           <a href="#" class="card-link">Comentar</a>
                         </div>
+                        </div>
                       </div>
-            
+
                     <li>Publicación en Red Social 2</li>
                     <li>Publicación en Red Social 3</li>
                 </ul>

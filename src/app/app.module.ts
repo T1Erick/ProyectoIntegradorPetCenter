@@ -14,6 +14,7 @@ import { PagesModule } from './pages/pages.module';
 import { ProductnamePipe } from './pipe/productname.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,7 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, PagesComponent, NofoundPagesComponent],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,

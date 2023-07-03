@@ -7,4 +7,20 @@
     background-repeat: no-repeat;
     margin-bottom: 30px;
 }
+button{
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+    background-color: #ed6436;
+    border: #ed6436;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  button:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+  }
 
