@@ -16,6 +16,7 @@ import { ListProductComponent } from './list-product/list-product.component';
 import { BillComponent } from './bill/bill.component';
 import { ProductnamePipe } from '../pipe/productname.pipe';
 import { SharedModule } from "../shared/shared.module";
+import { CategryprductPipe } from '../pipe/categryprduct.pipe';
 
 
 
@@ -23,7 +24,7 @@ import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
-    declarations: [ForumPetComponent, DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe],
+    declarations: [ForumPetComponent, DashboardClientComponent, ProductsComponent, SocialNetworkComponent, RegisterProductComponent, RegisterSectionComponent, RegisterCategoryComponent, DashboardAdminComponent, ListProductComponent, BillComponent, ProductnamePipe,CategryprductPipe],
     exports: [ForumPetComponent, DashboardClientComponent, ProductsComponent, RegisterProductComponent],
     imports: [
         CommonModule,

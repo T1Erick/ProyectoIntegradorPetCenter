@@ -11,10 +11,11 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
-import { ProductnamePipe } from './pipe/productname.pipe';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
