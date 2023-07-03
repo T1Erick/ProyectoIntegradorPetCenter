@@ -13,7 +13,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
-    AuthComponent,
+
     LoginComponent,
     RegisterComponent
   ],
@@ -21,8 +21,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule,
-    NgSelectModule,
     ReactiveFormsModule
 
 
@@ -30,7 +28,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
   exports: [
     LoginComponent,
     RegisterComponent,
-    AuthComponent
+    
   ]
 })
 export class AuthModule { }

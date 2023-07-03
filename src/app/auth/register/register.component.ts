@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     photo: '',
     email: '',
     password: '',
-    rol: '6a0cec44-61d8-467f-95d0-c80acf7d9b17'
+    rol: 'e1cb30fa-cd90-4758-9ef1-f4ad5953ea8a'
   };
 
   constructor(
@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
         this.clientsService.createUsers(this.users).subscribe(
           response => {
             console.log(response);
-            this.router.navigateByUrl('/dashboard/dashboard-client');
+            this.router.navigateByUrl('/login');
           }
         );
       } else {

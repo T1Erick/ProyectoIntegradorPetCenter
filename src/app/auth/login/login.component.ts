@@ -1,19 +1,74 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { UserAuthModel } from 'src/app/entities/auth-login.model';
+import { AuthService } from 'src/app/services/authservice.service';
+import { TokenService } from 'src/app/services/token.service';
+import jwt_decode from 'jwt-decode';
+
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
-constructor(private router: Router){
+constructor(private router: Router, private authService: AuthService, private tokenService: TokenService, private cookkieService: CookieService ){
 
 }
 
+ngOnInit(): void {
+  this.cookkieService.deleteAll()
 
-navigateToDashboard(){this.router.navigateByUrl("/dashboard/dashboard-client")}
+}
+user: UserAuthModel ={
+  email: '',
+  password: ''
+}
+Login():void{
+
+  try{
+    console.log(this.user)
+    this.authService.login(this.user).subscribe(
+      data=>{
+        if(data['accessToke']){
+          const dataJson = JSON.stringify(data['accessToke'])
+          console.log(dataJson)
+          this.cookkieService.set('user',dataJson)
+          this.router.navigateByUrl("/dashboard/dashboard-client")
+          console.log(this.cookkieService.get('user'))
+          const payload: any = jwt_decode(dataJson);
+          const role = payload.role.namerol
+
+          if (role === 'User') {
+            this.router.navigateByUrl("/dashboard/dashboard-client")
+
+          } if (role === 'Admin') {
+            this.router.navigateByUrl("/dashboard/dashboard-admin")
+
+          }
+        }else{
+          alert('No existe el usuario verifica bien tu informacion y si no tienes registrate es gratis :)');
+        }
+      }
+
+    )
+
+
+
+  }catch (error){
+    console.log(error)
+  }
+
+}
+
+deletecookie(){
+  this.cookkieService.deleteAll()
+}
+
+
 navigateToRegister() {
   this.router.navigateByUrl("register");
 }

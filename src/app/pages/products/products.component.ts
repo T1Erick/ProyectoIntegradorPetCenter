@@ -61,7 +61,10 @@ export class ProductsComponent implements OnInit  {
     const itsselected = this.productosSeleccionados.includes(product, 0)
     if (itsselected === false) {
       this.productosSeleccionados.push(product);
-    }
+      alert('El producto se agregó correctamente.');
+    }else {
+      alert('Ya agregaste ese Producto Selecciona otro por favor :).');
+        }
 
   }
   NavigateToBill(){
