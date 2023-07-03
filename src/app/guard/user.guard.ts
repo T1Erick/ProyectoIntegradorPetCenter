@@ -16,7 +16,11 @@ export class UserGuard implements CanActivate {
       const Jsonusuario= this.cokkieService.get('user')
       const payload: any = jwt_decode(Jsonusuario);
       const rol = payload.role.namerol
+<<<<<<< HEAD
       if (rol === 'Users') {
+=======
+      if (rol === 'Usuario') {
+>>>>>>> 925b796e27da016b2635909709e20942bd8f724e
         return true
 
       } else {

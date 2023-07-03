@@ -1,11 +1,11 @@
 .navbar {
   width: 100%;
   float: left;
-background-color: #272222;
+background-color: black;
 height: auto;
 padding-top: 20px;
 background-size: cover;
-  background-repeat: no-repeat;
+background-repeat: no-repeat;
 }
 .navbar form {
   display: flex;

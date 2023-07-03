@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { DashboardClientComponent } from './dashboard-client/dashboard-client.component';
-import { ForumPetComponent } from './forum-pet/forum-pet.component';
 import { ProductsComponent } from './products/products.component';
 import { SocialNetworkComponent } from './social-network/social-network.component';
 import { RegisterProductComponent } from './register-product/register-product.component';
@@ -27,7 +26,6 @@ const routes: Routes = [
       {path:'register-products', component: RegisterProductComponent,canActivate: [AdminGuard]},
       {path:'register-category', component: RegisterCategoryComponent ,canActivate: [AdminGuard]},
       {path: 'register-seccion', component: RegisterSectionComponent,canActivate: [AdminGuard]},
-      {path:'perfil',component:ForumPetComponent, canActivate:[UserGuard]},
       {path:'dashboard-admin', component:DashboardAdminComponent,canActivate: [AdminGuard]},
       {path:'list-product', component:ListProductComponent,canActivate: [AdminGuard]},
       {path:'bill', component: BillComponent, canActivate:[UserGuard]}

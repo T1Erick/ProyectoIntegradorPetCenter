@@ -25,8 +25,13 @@ export class ProductsComponent implements OnInit  {
   seccion: SectionModel[]=[]
   productosSeleccionados: ProductsModel[] = [];
   products: ProductsModel[]=[];
-  category: CategoryModel[]=[]
+  category: CategoryModel[]=[];
+  categoryproduct: string = '';
 
+  selectedcategoryproduct(category:string):void{
+    this.categoryproduct= category
+
+  }
   getProducts(){
     this.productService.getAll().subscribe(
 

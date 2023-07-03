@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { CategoryModel } from 'src/app/entities/category.model';
+import jwt_decode from 'jwt-decode';
 
 import { CreateProductsModelDto, ProductsModel } from 'src/app/entities/products.model';
 
@@ -9,9 +11,16 @@ import { CreateProductsModelDto, ProductsModel } from 'src/app/entities/products
   styleUrls: ['./bill.component.css']
 })
 export class BillComponent implements OnInit {
-  constructor() {
+  constructor(private cokkieService: CookieService) {
     this.imprimirButton = null;
+
   }
+  showButton = true;
+  Jsonusuario= this.cokkieService.get('user')
+  payload: any = jwt_decode(this.Jsonusuario);
+  namebill = this.payload.name;
+  secondnamebill= this.payload.secondname;
+  emailbill = this.payload.email
 
   ngOnInit() {
     this.imprimirButton = document.querySelector('button') as HTMLButtonElement;
@@ -74,6 +83,7 @@ export class BillComponent implements OnInit {
 
   imprimirFactura() {
     window.print();
+    this.showButton = false;
   }
 
 
@@ -81,5 +91,7 @@ export class BillComponent implements OnInit {
 
 
 }
+
+
 
 

@@ -35,8 +35,9 @@
     <div class="row">
       <div class="col-md-6">
         <h4>Información del Cliente:</h4>
-        <p>Nombre del Cliente:</p>
-        <p>Email del Cliente:</p>
+        <p>Nombre del Cliente: {{namebill}} </p>
+        <p>Segundo nombre del Cliente: {{secondnamebill}} </p>
+        <p>Email del Cliente: {{emailbill}}</p>
       </div>
       <div class="col-md-6">
         <h4>Información de la Factura:</h4>
@@ -71,7 +72,7 @@
       </div>
     </div>
     <div>
-      <button (click)="imprimirFactura()">Imprimir</button>
+      <button (click)="imprimirFactura()" *ngIf="showButton">Imprimir</button>
     </div>
   </div>
 </body>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { CreatePublicationModelDto, PublicationModel } from 'src/app/entities/publication.model';
 import { PublicationService } from 'src/app/services/publication.service';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-social-network',
@@ -8,7 +10,7 @@ import { PublicationService } from 'src/app/services/publication.service';
   styleUrls: ['./social-network.component.css']
 })
 export class SocialNetworkComponent implements OnInit {
-  constructor(private publicationService: PublicationService ){}
+  constructor(private publicationService: PublicationService, private cokkieService: CookieService ){}
   ngOnInit(): void {
     this.getPublications()
 
@@ -19,6 +21,12 @@ export class SocialNetworkComponent implements OnInit {
     description: '',
     images: ''
   }
+  Jsonusuario= this.cokkieService.get('user')
+  payload: any = jwt_decode(this.Jsonusuario);
+  namebill = this.payload.name;
+  secondnamebill= this.payload.secondname;
+  emailbill = this.payload.email
+  photobill = this.payload.photo
   getPublications(){
     this.publicationService.getAll().subscribe(
       response =>{
