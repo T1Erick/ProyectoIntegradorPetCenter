@@ -41,13 +41,15 @@ export class BillComponent implements OnInit {
   impuesto=0
   totalFactura =0
   total(){
+    this.totalF= 0
     let iva = 0.12
     for (let t = 0; t < this.totalU.length; t++) {
       const element = this.totalU[t];
-      this.totalF = this.totalU[t]+this.totalF
+      this.totalF = element+this.totalF
 
     }
     this.impuesto = iva * this.totalF
+    this.impuesto = parseFloat(this.impuesto.toFixed(2))
     this.totalFactura= this.impuesto + this.totalF
 
   }
