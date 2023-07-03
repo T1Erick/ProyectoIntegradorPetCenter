@@ -70,11 +70,7 @@
             <h5 class="card-title">{{publi.title}}</h5>
             <p class="card-text">{{publi.description}}</p>
             <img src="{{publi.images}}" class="img-fluid mb-2" >
-            <div class="form-group">
-              <textarea class="form-control" rows="2" placeholder="Escribe un comentario"></textarea>
-            </div>
-            <a href="#" class="card-link">Me gusta</a>
-            <a href="#" class="card-link">Comentar</a>
+
           </div>
         </div>
       </div>
@@ -82,13 +78,13 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Información de la Mascota</h5>
-            <img src="../../../assets/img/mascota1.jpeg" class="img-fluid mb-2" alt="Imagen de la mascota">
+            <h5 class="card-title">Información </h5>
+            <img src="{{photobill}}" class="img-fluid mb-2" >
             <ul class="list-group">
-              <li class="list-group-item">Nombre: Max</li>
-              <li class="list-group-item">Edad: 1 año</li>
-              <li class="list-group-item">Raza: Golden</li>
-              <li class="list-group-item">Dueño: Erick</li>
+              <li class="list-group-item">Nombre: {{namebill}}</li>
+              <li class="list-group-item">Apellido:  {{secondnamebill}} </li>
+              <li class="list-group-item">Email:  {{emailbill}} </li>
+
             </ul>
           </div>
         </div>
